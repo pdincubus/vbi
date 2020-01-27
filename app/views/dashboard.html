@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+    Dashboard
+{% endblock %}
+
+{% block header %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Helen Wilson</h1>
+
+            <h2 class="govuk-heading-m">PIP</h2>
+
+            <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Next payment date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        20 February 2020
+                    </dd>
+                </div>
+            </dl>
+
+            <h2 class="govuk-heading-m">ESA</h2>
+
+            <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Next payment date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        20 February 2020
+                    </dd>
+                </div>
+            </dl>
+
+            <h2 class="govuk-heading-m">JSA</h2>
+
+            <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Next payment date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        12 February 2020
+                    </dd>
+                </div>
+            </dl>
+
+            <h2 class="govuk-heading-m">IS</h2>
+
+            <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Next payment date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        3 March 2020
+                    </dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+{% endblock %}

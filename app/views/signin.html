@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+    Sign in - {{ data['prototype-service'] }}
+{% endblock %}
+
+{% block content %}
+    <form action="signin-code" method="post">
+        {{ govukFieldset({
+            legend: {
+                html: 'Sign in',
+                classes: "govuk-fieldset__legend--l",
+                isPageHeading: true
+            }
+        })}}
+
+        {{ govukInput({
+            label: {
+                text: "Email address"
+            },
+            id: "email-address",
+            name: "email-address",
+            classes: "govuk-!-width-one-half",
+            type: "email"
+        }) }}
+
+        {{ govukInput({
+            label: {
+                text: "Password"
+            },
+            id: "user-password",
+            name: "user-password",
+            classes: "govuk-!-width-one-half",
+            type: "password"
+        }) }}
+
+        {{ govukButton({
+            text: "Continue"
+        }) }}
+
+        <h2 class="govuk-heading-m">Problems signing in</h2>
+
+        <ul class="govuk-list signin">
+            <li>
+                <a href="#" class="govuk-link">I forgot my password</a>
+            </li>
+            <li>
+                {{ govukDetails({
+                    summaryText: "I forgot my email address",
+                    text: "lorem ipsum dolor sit amet, consectetur adepiscing"
+                }) }}
+            </li>
+        </ul>
+    </form>
+{% endblock %}
