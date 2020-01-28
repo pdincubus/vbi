@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+    Dashboard
+{% endblock %}
+
+{% block header %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form action="dashboard" method="post">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">Complete your information</h1>
+                    </legend>
+
+                    <p class="govuk-body">
+                        Before we can get your benefits information we need to know a few details about you.
+                    </p>
+
+                    {{ govukInput({
+                        label: {
+                            text: "First name"
+                        },
+                        id: "first-name",
+                        name: "first-name",
+                        classes: "govuk-!-width-three-quarters"
+                    }) }}
+
+                    {{ govukInput({
+                        label: {
+                            text: "Last name"
+                        },
+                        id: "last-name",
+                        name: "last-name",
+                        classes: "govuk-!-width-three-quarters"
+                    }) }}
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="national-insurance-number">
+                            National Insurance number
+                        </label>
+
+                        <span id="national-insurance-number-hint" class="govuk-hint">
+                            It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’.
+                        </span>
+
+                        <input
+                            class="govuk-input govuk-input--width-10"
+                            id="national-insurance-number"
+                            name="national-insurance-number"
+                            type="text"
+                            aria-describedby="national-insurance-number-hint"
+                            spellcheck="false"
+                        >
+                    </div>
+
+                    {{ govukButton({
+                        text: "Continue"
+                    }) }}
+                </fieldset>
+            </form>
+        </div>
+    </div>
+{% endblock %}
