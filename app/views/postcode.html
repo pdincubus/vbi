@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+    Complete your information
+{% endblock %}
+
+{% block header %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form action="nino" method="post">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">Complete your information</h1>
+                    </legend>
+
+                    {{ govukInput({
+                        label: {
+                            text: "Postcode"
+                        },
+                        id: "postcode",
+                        name: "postcode",
+                        classes: "govuk-!-width-three-quarters"
+                    }) }}
+
+                    {{ govukButton({
+                        text: "Continue"
+                    }) }}
+                </fieldset>
+            </form>
+        </div>
+    </div>
+{% endblock %}

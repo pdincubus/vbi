@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-    Dashboard
+    Complete your information
 {% endblock %}
 
 {% block header %}
@@ -11,33 +11,11 @@
 {% block content %}
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-            <form action="dashboard" method="post">
+            <form action="mobile" method="post">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                         <h1 class="govuk-fieldset__heading">Complete your information</h1>
                     </legend>
-
-                    <p class="govuk-body">
-                        Before we can get your benefits information we need to know a few details about you.
-                    </p>
-
-                    {{ govukInput({
-                        label: {
-                            text: "First name"
-                        },
-                        id: "first-name",
-                        name: "first-name",
-                        classes: "govuk-!-width-three-quarters"
-                    }) }}
-
-                    {{ govukInput({
-                        label: {
-                            text: "Last name"
-                        },
-                        id: "last-name",
-                        name: "last-name",
-                        classes: "govuk-!-width-three-quarters"
-                    }) }}
 
                     <div class="govuk-form-group">
                         <label class="govuk-label" for="national-insurance-number">

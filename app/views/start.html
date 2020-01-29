@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+    When is my next payment?
+{% endblock %}
+
+{% block header %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">When is my next payment?</h1>
+
+            <p class="govuk-body">Use this service to check:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>when your next payment date is for the mentioned benefits;</li>
+                <li>Employment and Support Allowance (ESA)</li>
+                <li>Income Support (IS)</li>
+                <li>Jobseeker’s Allowance (JSA)</li>
+                <li>Personal Independence Payment (PIP)</li>
+            </ul>
+
+            {{ govukButton({
+                text: "Start now",
+                isStartButton: true,
+                href: "name.html"
+            }) }}
+
+            <h2 class="govuk-heading-m">Before you start</h2>
+
+            <ul class="govuk-list">
+                <li>You will be asked for personal details, including your National Insurance Number.</li>
+                <li>You will need to have a phone to accept a validation code</li>
+                <li>You will need to be in receipt of one of these benefits;</li>
+                <li>Employment and Support Allowance (ESA)Income Support (IS)</li>
+                <li>Jobseeker’s Allowance (JSA)Personal Independence Payment (PIP)</li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
